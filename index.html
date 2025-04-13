@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter App</title>
+    <link rel="stylesheet" href="style.CSS">
+    
+  </head>
+  <body>
+    <div class="counter-body">
+      <h1>Enhanced Counter App</h1>
+      <h2 id="counter-display" class="counter-display">You clicked 0 times</h2>
+      <button onclick="incrementCount()">Increment</button>
+      <button onclick="decrementCount()">Decrement</button>
+      <button onclick="resetCount()">Reset</button>
+    </div>
+
+    <script>
+      let count = 0;
+      const counterDisplay = document.getElementById('counter-display');
+
+      function incrementCount() {
+        count++;
+        updateCounterDisplay();
+      }
+
+      function decrementCount() {
+        if (count > 0) {
+          count--;
+        }
+        updateCounterDisplay();
+      }
+
+      function resetCount() {
+        count = 0;
+        updateCounterDisplay();
+      }
+
+      function updateCounterDisplay() {
+        counterDisplay.textContent = `You clicked ${count} times`;
+
+        // Disable decrement button if count is 0
+        const decrementButton = document.querySelectorAll('button')[1];
+        decrementButton.disabled = count === 0;
+      }
+    </script>
+  </body>
+</html>
