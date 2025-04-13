@@ -1,2 +1,3 @@
 # Counter
+The Counter App is a simple yet interactive web application built using HTML, CSS, and JavaScript. Designed as a beginner-friendly project, it demonstrates the core fundamentals of DOM manipulation, event handling, and basic JavaScript logic. The app allows users to increment, decrement, and reset a numerical counter with a clean and responsive user interface.
 This project is ideal for those who are just starting their journey in front-end development and want to understand how JavaScript interacts with HTML elements in real time. It also helps in practicing CSS styling and layout management.
